@@ -32,6 +32,7 @@ This approach is useful for generating testable hypotheses about protein binding
 
 
 
+
 ## 🚀 Step 1: Get Your Protein Sequences
 
 To predict protein-protein interactions using AlphaFold, we need to provide both protein sequences. Each protein is represented by its amino acid sequence (in FASTA format). Below you can find the UniProt IDs for the Target protein and the partner proteins we are going to test. Feel free to choose one (or more) partner protein.
@@ -65,15 +66,17 @@ You can get protein sequences from [UniProt](https://www.uniprot.org/)
 
 
 
-## Running a protein-protein prediction on AlphaFoldServer
+
+## :facepunch: Step 2: Running a protein-protein prediction on AlphaFoldServer
+
 
 You need to Login to the [AlphaFoldServer](https://alphafoldserver.com/) page online. If you do not have an account, you can quickly create one. :bowtie:
-
 
 
 ## The input page on AlphaFoldServer should look like that:
 
 ![AlphafoldServer input](assets/alphafoldserver.png)
+
 
 
 
@@ -103,6 +106,68 @@ You need to Login to the [AlphaFoldServer](https://alphafoldserver.com/) page on
  
 
 
+## :wrench: Step 3: Installing some tools
+
+Before we proceed with folding proteins on the Cluster, we have some tools to install. I hope this will not take long!
+
+
+### Tool 1: MobaXterm
+
+MobaXterm is a powerful SSH client and terminal with X11 server support. Here's how to get it:
+
+**Steps:**
+
+1. Go to the official website: [MobaXterm](/https://mobaxterm.mobatek.net)
+
+2. Choose the version:
+
+	- Download the Home Edition.
+
+	- Choose the Installer edition (so it installs like a normal program) or Portable edition (just unzip and run).
+
+3. Install (if you chose Installer edition):
+
+	- Run the .exe file.
+
+	- Follow the installation steps.
+
+
+### Tool 2: Pymol
+
+PyMOL is a molecular visualization system. You can install the open-source version or the commercial one.
+
+
+#### - Option A: Install Open-Source PyMOL (via Conda)
+
+**Requirements:**
+
+	- Install Anaconda or Miniconda
+
+
+**Steps (in Anaconda Prompt):**
+
+bash
+
+```
+conda create -n pymol-env -c schrodinger pymol
+conda activate pymol-env
+pymol
+```
+
+This creates a new environment and installs PyMOL from the Schrödinger channel.
+
+
+#### - Option B: Commercial Pymol
+
+1. Follow the link: [Pymol](https://www.pymol.org/)
+
+2. Sign up or purchase a license. 
+
+You can also use my licence: :speak_no_evil:
+
+Download the [license](assets/pymol-edu-license.lic)
+
+3. Download the installer for your OS and follow the instructions.
 
 
 ---
