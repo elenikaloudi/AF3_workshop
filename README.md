@@ -16,7 +16,7 @@ Whether you're a beginner in structural biology or just trying to automate your 
 
 ## 🚀 Step 1: Get Your Protein Sequences
 
-You can get protein sequences from [UniProt] (https://www.uniprot.org/)
+You can get protein sequences from [UniProt](https://www.uniprot.org/)
 
 To predict protein-protein interactions using AlphaFold, we need to provide both protein sequences. Each protein is represented by its amino acid sequence (in FASTA format)
 
@@ -44,6 +44,7 @@ To predict protein-protein interactions using AlphaFold, we need to provide both
 	- Q91VK4
 	- O88384
 
+![AlphafoldServer input](assets/alphafoldserver.png)
 
 ---
 
