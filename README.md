@@ -38,17 +38,31 @@ To predict protein-protein interactions using AlphaFold, we need to provide both
 
 You can get protein sequences from [UniProt](https://www.uniprot.org/)
 
+
 - **Target protein:**
 
 	- Dram2_mouse (Q9CR48) 
 
+
 - **Partner proteins:**
 
-•  Q9DC58	 •  O70404	      •  Q9CZX7	      • Q6GSS7	      • P61161	      • C0HKE1 
+	* Q9DC58
+	* O70404	     
+	* Q9CZX7
+	* Q6GSS7
+	* P61161	   
+	* C0HKE1 
+	* P31996    
+	* P17047
+	* Q99KI0
+	* Q9QY73
+	* Q8R143
+	* Q922T2
+	* Q5SRX1
+	* Q91YT8
+	* Q91VK4
+	* O88384   
 
-• P31996      • P17047      • Q99KI0      • Q9QY73      • Q8R143      • Q922T2
-
-• Q5SRX1      • Q91YT8      • Q91VK4      • O88384   
 
 
 ## Running a protein-protein prediction on AlphaFoldServer
@@ -56,24 +70,26 @@ You can get protein sequences from [UniProt](https://www.uniprot.org/)
 You need to Login to the [AlphaFoldServer](https://alphafoldserver.com/) page online. If you do not have an account, you can quickly create one. :bowtie:
 
 
+
 ## The input page on AlphaFoldServer should look like that:
 
 ![AlphafoldServer input](assets/alphafoldserver.png)
 
 
+
 ### To do:
 
-1. Copy the target protein Fasta and paste it in the input box
+1. Copy the target protein **Fasta** and paste it in the **input box**
 
-2. Select 'Add entity' to add another input box
+2. Select **'Add entity'** to add another input box
 
-3. Copy and paste the partner protein in the other input box
+3. Copy and paste the partner protein **Fasta** in the other **input box**
 
-4. Select 'Continue and preview this job'
+4. Select **'Continue and preview this job'**
 
-5. Give a name to your job (recommended: Protein IDs)
+5. Give a **name** to your job (recommended: Protein IDs)
 
-6. Select 'Confirm and submit this job'
+6. Select **'Confirm and submit this job'**
 
 
 **Notes:**
