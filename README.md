@@ -209,6 +209,21 @@ You can use the [script](scripts/alphafold.sh)
 
 The script needs some adjustments before submitting it!
 
+**Note:**
+
+It needs about 1h to run, so let's not waste time and get the output from the [output folder](output_dram2_test)
+
+Find your protein based on the accession number and copy the output to your directory.
+
+
+##  :art: Step 6: Visualization
+
+Once the interaction predictions are complete, you can explore the resulting protein complexes in PyMOL to examine structural details and binding interfaces.
+
+The `output` directory you have contains many files. The one you are intrested in for visualization, the structure, is the `.cif` file. Click on that and open it in your computer.
+
+#### Feel free to explore Pymol
+
 
 ---
 
