@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Q9CR48_with_P61161",
+        "dialect": "alphafoldserver",
+        "version": 1,
+        "modelSeeds": [
+            22127,
+            337,
+            13519,
+            29477,
+            6023,
+            3128,
+            11078,
+            24753,
+            6008,
+            24210,
+            29689,
+            29567,
+            2630,
+            13073,
+            1617,
+            9646,
+            29783,
+            10664,
+            11636,
+            5831
+        ],
+        "sequences": [
+            {
+                "proteinChain": {
+                    "sequence": "MWWFQQGLSFLPSALVIWTFATFIFSYITAITLHHVDPALPYISDTGTIPPERCLFGVMLNIAAVLGIATMYVRYKQVHALNPEENLIIKLNKAGLVLGILSCLGLSLVANFQKSTLFIVHVCGAVLAFSMGSFYMFVQTILSYQMQPKIHSKQVFWVRLLLVIWCGVSALSMMTCSSILYSSDFGPDVVQKLHWNPEDKGYVLHLVTTAAEWSMSFSFFGFFLTYIRDFQKITLRVEANLHGLTLYDTVPCPVNNERTPLLSRDFQ",
+                    "count": 1
+                }
+            },
+            {
+                "proteinChain": {
+                    "sequence": "MDSQGRKVVVCDNGTGFVKCGYAGSNFPEHIFPALVGRPIIRSTTKVGNIEIKDLMVGDEASELRSMLEVNYPMENGIVRNWDDMKHLWDYTFGPEKLNIDTRNCKILLTEPPMNPTKNREKIVEVMFETYQFSGVYVAIQAVLTLYAQGLLTGVVVDSGDGVTHICPVYEGFSLPHLTRRLDIAGRDITRYLIKLLLLRGYAFNHSADFETVRMIKEKLCYVGYNIEQEQKLALETTVLVESYTLPDGRIIKVGGERFEAPEALFQPHLINVEGVGVAELLFNTIQAADIDTRSEFYKHIVLSGGSTMYPGLPSRLERELKQLYLERVLKGDVEKLSKFKIRIEDPPRRKHMVFLGGAVLADIMKDKDNFWMTRQEYQEKGVRVLEKLGVTVR",
+                    "count": 1
+                }
+            }
+        ]
+    }
+]

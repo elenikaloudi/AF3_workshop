@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Q9CR48_with_P31996",
+        "dialect": "alphafoldserver",
+        "version": 1,
+        "modelSeeds": [
+            11636,
+            27611,
+            29506,
+            5462,
+            28081,
+            25296,
+            12881,
+            4401,
+            19068,
+            19935,
+            19774,
+            12275,
+            22051,
+            530,
+            15755,
+            2040,
+            18025,
+            3486,
+            16371,
+            28436
+        ],
+        "sequences": [
+            {
+                "proteinChain": {
+                    "sequence": "MWWFQQGLSFLPSALVIWTFATFIFSYITAITLHHVDPALPYISDTGTIPPERCLFGVMLNIAAVLGIATMYVRYKQVHALNPEENLIIKLNKAGLVLGILSCLGLSLVANFQKSTLFIVHVCGAVLAFSMGSFYMFVQTILSYQMQPKIHSKQVFWVRLLLVIWCGVSALSMMTCSSILYSSDFGPDVVQKLHWNPEDKGYVLHLVTTAAEWSMSFSFFGFFLTYIRDFQKITLRVEANLHGLTLYDTVPCPVNNERTPLLSRDFQ",
+                    "count": 1
+                }
+            },
+            {
+                "proteinChain": {
+                    "sequence": "MRLPVCLILLGPLIAQGTEEDCPHKKAVTLLPSFTMTPTATESTASPTTSHRPTTTSHGNVTVHTSSGPTTVTHNPATTTSHGNATISHATVSPTTNGTATSPRSSTVGPHPGPPPPSPSPRSKGALGNYTWANGSQPCVQLQAQIQIRILYPIQGGRKAWGISVLNPNKTKVQGGCDGTHPHLSLSFPYGQLTFGFKQDLHQSPSTVYLDYMAVEYNVSFPQAAQWTFMAQNSSLRELQAPLGQSFCCGNASIVLSPAVHLDLLSLRLQAAQLPDKGHFGPCFSCNRDQSLLLPLIIGLVLLGLLTLVLIAFCITRRRQSTYQPL",
+                    "count": 1
+                }
+            }
+        ]
+    }
+]
