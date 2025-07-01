@@ -61,9 +61,11 @@ You can get protein sequences from [UniProt](https://www.uniprot.org/)
 	- O88384
 
 
-| - Q9DC58 | - O70404 | - Q9CZX7 | - Q6GSS7 | - P61161 | - C0HKE1 |
-| - P31996 | - P17047 | - Q99KI0 | - Q9QY73 | - Q8R143 | - Q922T2 |
-| - Q5SRX1 | - Q91YT8 | - Q91VK4 | - O88384 |   
+• Q9DC58      • O70404      • Q9CZX7      • Q6GSS7      • P61161      • C0HKE1 
+
+• P31996      • P17047      • Q99KI0      • Q9QY73      • Q8R143      • Q922T2
+
+• Q5SRX1      • Q91YT8      • Q91VK4      • O88384   
 
 
 
