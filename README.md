@@ -187,8 +187,27 @@ To run interaction modeling on the cluster, we need to prepare inputs that defin
 
 	Convert your `Fasta` to `json` by running the [script](scripts/fasta_to_json.py)
 
-5. Create a directory (naming example: A1L0T0_with_Q8N682) and move you `json` file in it.
+5. Create a directory (naming example: `A1L0T0_with_Q8N682`) and move your `json` file in it.
 
+
+## 🚀 Step 5: Submitting Jobs to the HPC Cluster
+
+Once your JSON input files are ready, you can launch the interaction prediction jobs by submitting them to the cluster.
+
+Each job will:
+
+- Read one JSON file (defining the protein pair)
+
+- Run AlphaFold3
+
+- Save the predicted complex and confidence scores
+
+You can use the [script](scripts/alphafold.sh) 
+
+
+#### **Don't forget:**
+
+The script needs some adjustments before submitting it!
 
 
 ---
