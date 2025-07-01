@@ -103,7 +103,7 @@ You need to Login to the [AlphaFoldServer](https://alphafoldserver.com/) page on
 
 * Let's try to assess the output together. What do you think about your model?
 
- 
+![AlphaFoldServer - Dram1 dimer](assets/dram1_dimer.png) 
 
 
 ## :wrench: Step 3: Installing some tools
@@ -117,7 +117,7 @@ MobaXterm is a powerful SSH client and terminal with X11 server support. Here's 
 
 **Steps:**
 
-1. Go to the official website: [MobaXterm](/https://mobaxterm.mobatek.net)
+1. Go to the official website: [MobaXterm](200~https://mobaxterm.mobatek.net/download.html)
 
 2. Choose the version:
 
@@ -141,12 +141,10 @@ PyMOL is a molecular visualization system. You can install the open-source versi
 
 **Requirements:**
 
-	- Install Anaconda or Miniconda
+	Install Anaconda or Miniconda
 
 
 **Steps (in Anaconda Prompt):**
-
-bash
 
 ```
 conda create -n pymol-env -c schrodinger pymol
@@ -163,11 +161,34 @@ This creates a new environment and installs PyMOL from the Schrödinger channel.
 
 2. Sign up or purchase a license. 
 
-You can also use my licence: :speak_no_evil:
+	You can also use my licence: :speak_no_evil:
 
-Download the [license](assets/pymol-edu-license.lic)
+	Download the [license](assets/pymol-edu-license.lic)
 
 3. Download the installer for your OS and follow the instructions.
+
+
+
+## :bomb: Step 4: Creating the input for running AlphaFold on the HPC 
+
+You are now at the step of preparing input files to run interaction modeling on an HPC cluster using AlphaFold3.
+
+To run interaction modeling on the cluster, we need to prepare inputs that define which two proteins should be modeled together as a complex. The input should be Json files. This format makes it easy to automate many pairwise runs between a protein of interest and multiple partners.
+
+**To Do:**
+
+1. Upload the `FASTA` sequences on the cluster or Copy them in a text file (You need the **target** protein and the **partner** protein)
+
+2. Clean the headers (if necessary)
+
+3. Split the sequences (in case you have them in the same file)
+
+4. Convert to `.json` 
+
+	Convert your `Fasta` to `json` by running the [script](scripts/fasta_to_json.py)
+
+5. Create a directory (naming example: A1L0T0_with_Q8N682) and move you `json` file in it.
+
 
 
 ---
