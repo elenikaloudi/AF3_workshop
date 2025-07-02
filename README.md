@@ -213,10 +213,77 @@ The script needs some adjustments before submitting it!
 
 It needs about 1h to run, so let's not waste time and get the output from the [output folder](output_dram2_test)
 
-Find your protein based on the accession number and copy the output to your directory.
+
+## :mag_right: Step 6: Filter high confidence interactions
+
+After generating predicted complexes, we can filter out low-confidence interactions by analyzing the Predicted Aligned Error (PAE) scores between chains.
+
+PAE provides a per-residue estimate of how well the model predicts the relative position of two regions — in our case, the two protein chains. Lower PAE values at the interface indicate a more confident prediction of the interaction.
+
+**PAE extraction:**
+
+This script processes AlphaFold or similar model outputs by reading `summary_confidences.json` files to extract between-chain Predicted Aligned Error (PAE) statistics. It filters results based on an optional PAE threshold and outputs a CSV file summarizing the results.
 
 
-##  :art: Step 6: Visualization
+You can find the script here.
+
+
+The script extracts average, min, and max between-chain PAE values from structured model output directories.
+
+
+**Usage:**
+
+Run the script by editing the last line by specifying the `input_dir`, `output_dir` and the `pae_threashold`.
+
+```
+python pae_filtered_10.py
+```
+
+### Notes:
+
+This will:
+
+- Traverse the directory tree to locate all`*summary_confidences.json` files.
+
+- Extract between-chain PAE values.
+
+- Write output rows to a CSV file containing:
+
+        - Directory
+
+        - Average PAE
+
+        - Minimum PAE
+
+        - Maximum PAE
+
+        - All extracted PAE values (comma-separated)
+
+- Skips any `.json` that doesn't contain `chain_pair_pae_min`.
+
+
+#### Tips:
+
+Prepare Input Directory
+
+The input should be a master directory structured like this:
+
+```
+input_directory/
+├── protein_1/
+│   └── model_1/
+│       └── result_summary_confidences.json
+├── protein_2/
+│   └── model_1/
+│       └── result_summary_confidences.jsonn
+...
+
+```
+
+Each `.json` file should contain a `"chain_pair_pae_min"` matrix.
+
+
+##  :art: Step 7: Visualization
 
 Once the interaction predictions are complete, you can explore the resulting protein complexes in PyMOL to examine structural details and binding interfaces.
 
@@ -230,5 +297,7 @@ The `output` directory you have contains many files. The one you are intrested i
 ## 🙌 Thanks for Participating!
 
 We hope this workshop gives you the confidence to explore and predict protein interactions.
+
+If you have questions or you want to contact me, send me an email: elenikaloudi1@gmail.com
 
 ## Happy folding! 🧬
