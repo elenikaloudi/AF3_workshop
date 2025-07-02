@@ -213,7 +213,7 @@ You can move around the directory using:
 > [!WARNING]
 > Please check the box in the bottom left corner that says "Follow terminal folder". This will allow you to click and open files using the mouse.
 
-### 5.0 Move into folder
+### Move into folder
 
 Run this line of code to get into the workshops folder containing everything you need to follow the workshop:
 
