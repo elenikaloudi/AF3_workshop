@@ -180,9 +180,12 @@ To run interaction modeling on the cluster, we need to prepare inputs that defin
 
 1. Upload the `FASTA` sequences on your directory 
 
+	You can find the sequences [here](fasta)
+
 2. Convert to `.json` 
 
 	Convert your `Fasta` to `json` by running the [script](scripts/fasta_to_json.py)
+
 
 Convert as Bait–Prey Interactions
 
@@ -198,6 +201,7 @@ Output files will be named like: `PreyProtein_with_BAIT.json`.
 
 Random model seeds are automatically generated (default = 20). You can change this with --seeds:
 `python fasta_to_json.py ... --seeds 50`
+
 
 
 
@@ -233,6 +237,15 @@ For every `*.json` file in the provided directory:
 - Moves the file into its corresponding directory.
 
 
+### Script: `organise_json.sh`
+
+**Usage:**
+
+```
+bash organise_json.sh path/to/json/directory
+```
+
+
 ## 🚀 Step 5: Submitting Jobs to the HPC Cluster
 
 Once your JSON input files are ready, you can launch the interaction prediction jobs by submitting them to the cluster.
@@ -256,12 +269,14 @@ Each subdirectory must contain a valid AlphaFold3 input `.json` file.
 
 Input directory structure:
 
-`master_dir/
+
+```
+master_dir/
 ├── job1/
 │ └── input.json
 ├── job2/
 │ └── input.json
-`
+```
 
 You first need to set the environmental paths as stated above and then run:
 
