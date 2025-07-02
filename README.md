@@ -169,6 +169,57 @@ This creates a new environment and installs PyMOL from the Schrödinger channel.
 3. Download the installer for your OS and follow the instructions.
 
 
+## :point_left: Step 4.0: The set-up
+
+### Folder creation
+
+Lets create your own folder:
+
+```bash
+mkdir <your_name>
+```
+
+**Note:**
+- Change the <your_name> to your own name!
+
+
+### Moving into the folder
+
+Then move into your folder by running:
+
+```bash
+cd <your_name>
+```
+
+### Download files
+
+We will download the files by cloning the github repository onto alice:
+This will generate a new folder you can can work in with all the files you need.
+
+```bash
+git clone https://github.com/elenikaloudi/AF3_workshop
+```
+**Note:**
+
+You can move around the directory using:
+
+- `cd` (change directory).
+	- Followed by either the directory you want to enter.
+ 	- Followed by .. (double dot) to go back one directory.
+- `ls` (look in a directory).
+	- Followed by either the directory you want to look into.
+	- Followed by .. (double dot) to see one directory back.
+
+> [!WARNING]
+> Please check the box in the bottom left corner that says "Follow terminal folder". This will allow you to click and open files using the mouse.
+
+### 5.0 Move into folder
+
+Run this line of code to get into the workshops folder containing everything you need to follow the workshop:
+
+```bash
+cd AF3_workshop
+```
 
 ## :bomb: Step 4.1: Creating the input for running AlphaFold on the HPC 
 
