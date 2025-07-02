@@ -131,6 +131,7 @@ MobaXterm is a powerful SSH client and terminal with X11 server support. Here's 
 
 	- Follow the installation steps.
 
+4. Use the instructions on [ALICE WIKI](https://pubappslu.atlassian.net/wiki/spaces/HPCWIKI/pages/37519361/ALICE)
 
 ### Tool 2: Pymol
 
@@ -169,7 +170,7 @@ This creates a new environment and installs PyMOL from the Schrödinger channel.
 
 
 
-## :bomb: Step 4: Creating the input for running AlphaFold on the HPC 
+## :bomb: Step 4.1: Creating the input for running AlphaFold on the HPC 
 
 You are now at the step of preparing input files to run interaction modeling on an HPC cluster using AlphaFold3.
 
@@ -177,17 +178,59 @@ To run interaction modeling on the cluster, we need to prepare inputs that defin
 
 **To Do:**
 
-1. Upload the `FASTA` sequences on the cluster or Copy them in a text file (You need the **target** protein and the **partner** protein)
+1. Upload the `FASTA` sequences on your directory 
 
-2. Clean the headers (if necessary)
-
-3. Split the sequences (in case you have them in the same file)
-
-4. Convert to `.json` 
+2. Convert to `.json` 
 
 	Convert your `Fasta` to `json` by running the [script](scripts/fasta_to_json.py)
 
-5. Create a directory (naming example: `A1L0T0_with_Q8N682`) and move your `json` file in it.
+Convert as Bait–Prey Interactions
+
+```
+python fasta_to_json.py path/to/input/directory --bait path/to/bait.fasta
+```
+
+**Notes:**
+
+`bait.fasta` should contain exactly one protein sequence.
+
+Output files will be named like: `PreyProtein_with_BAIT.json`.
+
+Random model seeds are automatically generated (default = 20). You can change this with --seeds:
+`python fasta_to_json.py ... --seeds 50`
+
+
+
+3. Move all your `json` files in a directory
+
+	To create a directory:
+
+```
+mkdir name_of_directory
+```
+
+4. To move all the `json` files at once run:
+
+
+```
+mv *.json /path/to/the/directory
+```
+
+
+## :star: Step 4.2: Organize JSON Files into Subdirectories
+
+After generating `JSON` files, you can organize each into its own folder using the [script](scripts/organize_json.sh).
+
+The output directory of the previous step will be the input directory for this step. So, make sure that all the json files are in one directory.
+
+
+**What it does:**
+
+For every `*.json` file in the provided directory:
+
+- Creates a new subdirectory named after the file.
+
+- Moves the file into its corresponding directory.
 
 
 ## 🚀 Step 5: Submitting Jobs to the HPC Cluster
@@ -202,7 +245,29 @@ Each job will:
 
 - Save the predicted complex and confidence scores
 
-You can use the [script](scripts/alphafold.sh) 
+You can use the [script](scripts/master_script.sh) 
+
+
+This script goes through each folder inside a main directory. For every folder, it creates a SLURM job script, sets the correct input and output paths, and submits the job to the cluster using `sbatch`.
+
+**Usage**
+
+Each subdirectory must contain a valid AlphaFold3 input `.json` file.
+
+Input directory structure:
+
+`master_dir/
+├── job1/
+│ └── input.json
+├── job2/
+│ └── input.json
+`
+
+You first need to set the environmental paths as stated above and then run:
+
+```
+bash master_script.sh /path/to/master_dir
+```
 
 
 #### **Don't forget:**
@@ -225,7 +290,7 @@ PAE provides a per-residue estimate of how well the model predicts the relative 
 This script processes AlphaFold or similar model outputs by reading `summary_confidences.json` files to extract between-chain Predicted Aligned Error (PAE) statistics. It filters results based on an optional PAE threshold and outputs a CSV file summarizing the results.
 
 
-You can find the script here.
+You can find the script [here](scripts/pae_filtered_10.py).
 
 
 The script extracts average, min, and max between-chain PAE values from structured model output directories.
